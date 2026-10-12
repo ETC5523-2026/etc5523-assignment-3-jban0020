@@ -144,3 +144,16 @@ thead {
     font-size: 1.5rem;
   }
 }
+
+/* About page text alignment */
+
+.quarto-about-jolla main.content {
+  text-align: left !important;
+}
+
+.quarto-about-jolla main.content h2,
+.quarto-about-jolla main.content h3,
+.quarto-about-jolla main.content p,
+.quarto-about-jolla main.content ul {
+  text-align: left !important;
+}
