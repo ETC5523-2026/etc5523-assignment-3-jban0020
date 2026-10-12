@@ -1,4 +1,146 @@
-/* css styles */
-.navbar-dark, .quarto-title-banner {
-  background-color: #006DAE;
+/* color pallete */
+
+:root {
+  --navy: #022B3A;
+  --teal: #1F7A8C;
+  --sky: #BFDBF7;
+  --lavender: #E1E5F2;
+  --white: #FFFFFF;
+}
+
+/* General appearance */
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--white);
+  color: var(--navy);
+  line-height: 1.7;
+}
+
+/* Navigation bar */
+
+.navbar,
+.navbar-dark {
+  background-color: var(--navy) !important;
+  box-shadow: 0 2px 8px rgba(2, 43, 58, 0.12);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: var(--white) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar .nav-link:hover,
+.navbar-brand:hover {
+  color: var(--sky) !important;
+}
+
+/* Homepage title banner */
+
+.quarto-title-banner {
+  background-color: var(--navy) !important;
+}
+
+.quarto-title-banner h1,
+.quarto-title-banner .subtitle {
+  color: var(--white) !important;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--navy);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  border-bottom: 2px solid var(--teal);
+  padding-bottom: 0.4rem;
+}
+
+h3 {
+  color: var(--teal);
+}
+
+/* Links */
+
+main a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+main a:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+/* Homepage blog listing */
+
+.quarto-post {
+  border-bottom: 1px solid var(--lavender);
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.quarto-post .listing-title {
+  color: var(--navy);
+  font-weight: 650;
+}
+
+.quarto-post .listing-title:hover {
+  color: var(--teal);
+}
+
+/* Categories */
+
+.quarto-category {
+  border: 1px solid var(--sky);
+  border-radius: 6px;
+}
+
+/* Blockquotes */
+
+blockquote {
+  background-color: var(--lavender);
+  border-left: 4px solid var(--teal);
+  padding: 1rem 1.4rem;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Code blocks */
+
+pre {
+  background-color: #F4F7FC;
+  border: 1px solid var(--lavender);
+  border-radius: 8px;
+}
+
+/* Tables */
+
+thead {
+  background-color: var(--lavender);
+}
+
+/* Footer */
+
+.nav-footer {
+  border-top: 1px solid var(--lavender);
+  color: var(--navy);
+}
+
+/* Mobile readability */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
