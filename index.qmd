@@ -1,14 +1,94 @@
 ---
-title: "ETC5523 Blog Assessment"
+title: "Welcome to the world of Josh"
 listing:
   contents: posts
   sort: "date desc"
-  type: default
+  type: grid
   categories: true
   sort-ui: false
   filter-ui: false
+  image-height: 180px
+  grid-columns: 2
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 ---
 
+::: {.home-hero}
 
+# Communicating with Data
+
+### Exploring data through analysis, visualisation and storytelling.
+
+Welcome to my data analytics blog! This website explores how data can be transformed into meaningful insights through statistical analysis, effective visualisation and clear communication.
+
+::: {.hero-buttons}
+
+[Explore Blog Posts](blog.qmd){.btn .btn-primary .btn-lg}
+
+[About Me](about.qmd){.btn .btn-outline-primary .btn-lg}
+
+:::
+
+:::
+
+::: {.home-content}
+
+## Welcome!
+
+Data is more than just numbers. When analysed and communicated effectively, it can reveal patterns, explain complex issues and support informed decision-making.
+
+Through this website, I share my work in data analysis and visualisation, applying techniques developed throughout ETC5523: Communicating with Data at Monash University.
+
+My aim is to make statistical findings accessible, engaging and meaningful to a wider audience.
+
+---
+
+## What You'll Find Here
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+
+::: {.feature-card}
+
+### 📊 Data Analysis
+
+Exploring datasets to identify trends, relationships and meaningful patterns.
+
+:::
+
+:::
+
+::: {.g-col-12 .g-col-md-4}
+
+::: {.feature-card}
+
+### 📈 Data Visualisation
+
+Using effective graphics to communicate statistical findings clearly.
+
+:::
+
+:::
+
+::: {.g-col-12 .g-col-md-4}
+
+::: {.feature-card}
+
+### 💡 Data Storytelling
+
+Turning complex information into accessible insights and compelling narratives.
+
+:::
+
+:::
+
+:::
+
+---
+
+## Latest Posts {#latest-posts}
+
+Explore my latest articles, visualisations and data-driven insights.
+
+:::
