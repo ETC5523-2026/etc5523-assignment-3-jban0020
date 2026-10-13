@@ -6,7 +6,7 @@ website:
   description: "Exploring data through visualisation, analysis and storytelling."
 
   navbar:
-    background: "#022B3A"
+    background: "#006DAE"
     foreground: "#FFFFFF"
     search: true
     right:
@@ -21,6 +21,6 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-    backgroundcolor: "#FFFFFF"
-    fontcolor: "#022B3A"
-    linkcolor: "#1F7A8C"
+    backgroundcolor: "#F6F6F6"
+    fontcolor: "#222222"
+    linkcolor: "#006DAE"
