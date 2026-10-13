@@ -1,12 +1,16 @@
 ---
-title: "Welcome To My Blog Template"
-author: "Emi Tanaka"
-date: "2022-07-18"
-categories: [news]
+title: "Could Vaccination Alone Keep COVID-19 Out? What the Delta Modelling Revealed"
+author: "Joshua Bannon"
+date: "2026-10-13"
+categories: [Public Health, COVID-19, Data Storytelling]
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-This is the first post in a Quarto blog. Welcome!
+## References
 
-![](thumbnail.jpg)
-
-
+::: {#refs}
+:::
