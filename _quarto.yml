@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Communicating with Data"
+  title: "Joshua Bannon"
   description: "Exploring data through visualisation, analysis and storytelling."
 
   navbar:
@@ -10,6 +10,10 @@ website:
     foreground: "#FFFFFF"
     search: true
     right:
+      - text: "Home"
+        href: index.qmd
+      - text: "Blog Posts"
+        href: blog.qmd
       - text: "About"
         href: about.qmd
       - icon: github
