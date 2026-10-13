@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "Welcome to my blog! Here you’ll find articles exploring different datasets, statistical methods and approaches to communicating data.\nSelect a post below to read more.\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\nCould Vaccination Alone Keep COVID-19 Out?\n\n\n\nPublic Health\n\nCOVID-19\n\nData Analysis\n\n\n\n\n\n\n\nJoshua Bannon\n\n\nOct 13, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to the world of Josh",
+    "section": "",
+    "text": "Welcome to my data analytics blog! This website explores how data can be transformed into meaningful insights through statistical analysis, effective visualisation and clear communication.\n\nExplore Blog Posts\nAbout Me"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Welcome to the world of Josh",
+    "section": "Welcome!",
+    "text": "Welcome!\nData is more than just numbers. When analysed and communicated effectively, it can reveal patterns, explain complex issues and support informed decision-making.\nThrough this website, I share my work in data analysis and visualisation, applying techniques developed throughout ETC5523: Communicating with Data at Monash University.\nMy aim is to make statistical findings accessible, engaging and meaningful to a wider audience."
+  },
+  {
+    "objectID": "index.html#what-youll-find-here",
+    "href": "index.html#what-youll-find-here",
+    "title": "Welcome to the world of Josh",
+    "section": "What You’ll Find Here",
+    "text": "What You’ll Find Here\n\n\n\n📊 Data Analysis\nExploring datasets to identify trends, relationships and meaningful patterns.\n\n\n\n\n📈 Data Visualisation\nUsing effective graphics to communicate statistical findings clearly.\n\n\n\n\n💡 Data Storytelling\nTurning complex information into accessible insights and compelling narratives."
+  },
+  {
+    "objectID": "index.html#latest-posts",
+    "href": "index.html#latest-posts",
+    "title": "Welcome to the world of Josh",
+    "section": "Latest Posts",
+    "text": "Latest Posts\nExplore my latest articles, visualisations and data-driven insights."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Could Vaccination Alone Keep COVID-19 Out?",
+    "section": "",
+    "text": "In 2021, Australia faced an important question: could international travel safely resume if travellers and quarantine workers were vaccinated?\nThroughout the COVID-19 pandemic, border quarantine helped Australia and New Zealand keep infections from spreading into the community. However, strict border restrictions also separated families, disrupted international travel and placed pressure on industries such as tourism and education.\nAs vaccination rates increased, reopening international borders became a more realistic possibility.\nThen came the Delta variant.\nResearch showed that Delta was considerably more transmissible than earlier COVID-19 variants, making it harder to prevent infections from spreading (Campbell et al. 2021).\nAt the same time, studies of vaccine effectiveness demonstrated that protection against Delta differed from protection against earlier variants (Lopez Bernal et al. 2021).\nThis created a difficult challenge for policymakers: how could countries reopen while keeping the risk of community outbreaks low?\nTwo questions became particularly important:\n\nCould vaccination reduce the additional quarantine risk created by the Delta variant?\nWould vaccinating travellers and quarantine workers be enough to prevent community outbreaks?\n\nResearch by Zachreson et al. (Zachreson et al. 2022) investigated these questions through computer simulations of border quarantine and community transmission."
+  },
+  {
+    "objectID": "posts/welcome/index.html#problem-description",
+    "href": "posts/welcome/index.html#problem-description",
+    "title": "Could Vaccination Alone Keep COVID-19 Out?",
+    "section": "",
+    "text": "In 2021, Australia faced an important question: could international travel safely resume if travellers and quarantine workers were vaccinated?\nThroughout the COVID-19 pandemic, border quarantine helped Australia and New Zealand keep infections from spreading into the community. However, strict border restrictions also separated families, disrupted international travel and placed pressure on industries such as tourism and education.\nAs vaccination rates increased, reopening international borders became a more realistic possibility.\nThen came the Delta variant.\nResearch showed that Delta was considerably more transmissible than earlier COVID-19 variants, making it harder to prevent infections from spreading (Campbell et al. 2021).\nAt the same time, studies of vaccine effectiveness demonstrated that protection against Delta differed from protection against earlier variants (Lopez Bernal et al. 2021).\nThis created a difficult challenge for policymakers: how could countries reopen while keeping the risk of community outbreaks low?\nTwo questions became particularly important:\n\nCould vaccination reduce the additional quarantine risk created by the Delta variant?\nWould vaccinating travellers and quarantine workers be enough to prevent community outbreaks?\n\nResearch by Zachreson et al. (Zachreson et al. 2022) investigated these questions through computer simulations of border quarantine and community transmission."
+  },
+  {
+    "objectID": "posts/welcome/index.html#analysis",
+    "href": "posts/welcome/index.html#analysis",
+    "title": "Could Vaccination Alone Keep COVID-19 Out?",
+    "section": "2. Analysis",
+    "text": "2. Analysis\n\nHow researchers investigated the problem\nRather than waiting for outbreaks to occur, researchers used computer simulations to examine how COVID-19 might spread under different conditions.\nThe study by Zachreson et al. (2022) used information from Australian and New Zealand international arrival data, Australian quarantine breach reports and public-health information to inform its modelling.\nThe researchers developed two connected simulations.\nThe first simulated infections within a quarantine facility containing up to 100 international travellers and 20 workers. It considered vaccination, testing, isolation and the possibility of infections escaping quarantine.\nThe second examined what could happen after an infection entered the wider community.\nBy combining these models, researchers investigated how three factors influenced COVID-19 risk:\n\nVirus transmissibility: How easily the virus spreads between people.\nVaccine efficacy: How effectively vaccination reduces infection and transmission.\nCommunity vaccination coverage: The proportion of people vaccinated in the wider population.\n\nThese were hypothetical scenarios generated by computer models, rather than records of actual outbreaks.\n\n\nFinding 1: More contagious variants require stronger protection\nOne of the clearest findings was that vaccination became less able to offset quarantine risk as the virus became more transmissible.\nThe researchers used a pre-Delta scenario with a basic reproduction number of \\(R_0 = 3\\) and no vaccination as their baseline.\nThe reproduction number, or \\(R_0\\), describes how many people one infected person would infect on average in a fully susceptible population.\nFor example, an \\(R_0\\) of 6 means that one infected person could infect approximately six other people under those conditions.\nThe study found that higher vaccine efficacy against transmission was required to maintain the original quarantine breach risk as transmissibility increased (Zachreson et al. 2022).\n\n\n\n\n\n\n\n\nFigure 1: Approximate vaccine efficacy thresholds required to maintain the pre-Delta quarantine breach risk. Based on Zachreson et al. (2022).\n\n\n\n\n\nAs shown in Figure 1, vaccine efficacy against transmission needed to exceed approximately 60% when \\(R_0 = 6\\) to maintain the pre-Delta quarantine breach risk.\nWhen transmissibility increased to \\(R_0 = 8\\), this threshold rose to above 70%.\nThese values represent approximate thresholds from the model. They are not estimates of the effectiveness of any particular vaccine.\nThe important message is that the effectiveness of a quarantine strategy depends on how transmissible the circulating variant is.\nAs the virus becomes more contagious, stronger protection is required to maintain the same level of safety.\n\n\nFinding 2: Community vaccination matters too\nReducing the chance of an infection escaping quarantine is important. However, what happens if an infected person still enters the community?\nThe researchers investigated this by modelling the spread of infections after a quarantine breach.\nTheir analysis considered how long it would take for the probability of an outbreak involving at least five cases to reach 50%.\nThe results showed that protecting the quarantine facility and protecting the wider community are two different challenges.\nVaccinating travellers and quarantine workers reduces the risk of infections escaping quarantine.\nHowever, community vaccination becomes particularly important if a breach occurs.\nWhen vaccine efficacy against transmission was below approximately 60%, increasing community vaccination coverage provided comparatively limited additional protection against outbreaks.\nWhen efficacy reached 80% or higher, high vaccination coverage substantially delayed the point at which community outbreaks became likely (Zachreson et al. 2022).\nTable 1 summarises the main findings.\n\n\n\n\n\n\n\n\n\n\n\nHow vaccination affects COVID-19 outbreak risk\n\n\nEvidence from Zachreson et al. (2022)\n\n\nVACCINATION SCENARIO\nKEY FINDING\n\n\n\n\nVaccination within quarantine\nReduces the risk of infections escaping quarantine.\n\n\nVaccine efficacy below 60%\nLimited protection against community outbreaks, even with high coverage.\n\n\nVaccine efficacy of 80% or higher\nGreater protection against community transmission as coverage increases.\n\n\nHigh efficacy + high community coverage\nSubstantially delays the likelihood of a community outbreak.\n\n\n\n\n\n\n\n\nTable 1: How vaccine efficacy and vaccination coverage influence quarantine and community outbreak risk.\n\n\n\n\nThe results highlight why vaccination coverage matters beyond the quarantine facility.\nA highly effective vaccine may reduce transmission, but its population-level benefit also depends on how many people are vaccinated.\nSimilarly, even high vaccination coverage cannot fully compensate for a vaccine that provides relatively limited protection against transmission.\nProtecting the wider community requires both effective vaccines and widespread vaccination.\nThese findings relate to protection against transmission, rather than the separate question of how well vaccines prevent severe illness.\n\n\nHow much could vaccination delay an outbreak?\nThe simulations also showed just how strongly effective vaccination could influence the time until a community outbreak became likely.\nResearchers measured the time until there was a 50% probability of at least one outbreak involving five or more cases.\nUnder the pre-Delta baseline scenario, this occurred after approximately 15 days.\nHowever, in scenarios combining high vaccine efficacy with high community vaccination coverage, the modelled time could increase to the order of 1,000 days, although the results depended on virus transmissibility and the specific vaccination scenario (Zachreson et al. 2022).\n\n\n\n\n\n\n\n\nFigure 2: Approximate modelled time until a 50% probability of a community outbreak involving at least five cases. Based on Zachreson et al. (2022).\n\n\n\n\n\nAs shown in Figure 2, the modelled time until a community outbreak became likely differed substantially between the scenarios.\nUnder the pre-Delta baseline, the model estimated approximately 15 days until there was a 50% probability of an outbreak involving at least five cases.\nUnder scenarios combining high vaccine efficacy with high community vaccination coverage, this increased to the order of 1,000 days (Zachreson et al. 2022).\nThe figure uses a logarithmic scale to display both scenarios clearly. These results do not mean vaccination guarantees 1,000 outbreak-free days, and the difference cannot be attributed to vaccination alone because the modelled conditions differ.\nInstead, the findings illustrate how effective vaccination and high community coverage can substantially reduce outbreak risk.\n\n\nWhat does this mean for reopening borders?\nThe research demonstrates why vaccination within quarantine was not enough to guarantee safe reopening during the Delta period.\nWhile vaccinating travellers and quarantine workers could reduce the likelihood of a breach, an infection that entered the community could still develop into an outbreak.\nThe findings suggest that decisions about border restrictions needed to consider three factors together:\n\nHow transmissible the circulating variant was.\nHow effectively available vaccines reduced transmission.\nHow much of the wider community was vaccinated.\n\nThese factors could change over time.\nFor example, a more transmissible variant could increase the chance of infections escaping quarantine, even when vaccination requirements remained unchanged.\nLikewise, limited community protection could increase the risk that an escaped infection developed into an outbreak.\nThis is why the researchers’ findings support combining vaccination with effective testing, isolation and infection-control measures.\nThe broader lesson is that border reopening decisions should respond to changing evidence rather than rely on vaccination status alone."
+  },
+  {
+    "objectID": "posts/welcome/index.html#conclusion",
+    "href": "posts/welcome/index.html#conclusion",
+    "title": "Could Vaccination Alone Keep COVID-19 Out?",
+    "section": "3. Conclusion",
+    "text": "3. Conclusion\n\nWhy vaccination was only part of the solution\nSo, could vaccination alone keep COVID-19 out of Australia?\nThe modelling suggests that vaccination was an important defence, but not a complete solution.\nResearch by Zachreson et al. (2022) found that vaccination could help offset the greater quarantine risk associated with more transmissible variants, but only when vaccine efficacy against transmission was sufficiently high.\nFor a virus with an \\(R_0\\) of 6, efficacy needed to exceed approximately 60% to maintain the earlier quarantine breach risk. When \\(R_0\\) increased to 8, the required efficacy rose above 70%.\nThe study also showed that vaccinating travellers and quarantine workers was not sufficient by itself to protect the wider community.\nHigh community vaccination coverage, particularly when vaccines were highly effective against transmission, provided additional protection against outbreaks.\nThese findings are consistent with the broader evidence showing that the Delta variant increased transmission challenges and that vaccine protection varied across variants (Campbell et al. 2021; Lopez Bernal et al. 2021).\nThe central lesson is that no single measure can eliminate the risk of an outbreak.\nFor policymakers, effective border management requires considering vaccination, community protection, variant transmissibility and infection-control measures together.\nAlthough this research focused on the Delta period, its broader message remains relevant: public-health strategies need to adapt when the risks they are designed to manage change."
+  },
+  {
+    "objectID": "posts/welcome/index.html#references",
+    "href": "posts/welcome/index.html#references",
+    "title": "Could Vaccination Alone Keep COVID-19 Out?",
+    "section": "References",
+    "text": "References\n\n\nCampbell, Finlay, Brett Archer, Henry Laurenson-Schafer, et al. 2021. “Increased Transmissibility and Global Spread of SARS-CoV-2 Variants of Concern as at June 2021.” Eurosurveillance 26 (24): 2100509. https://doi.org/10.2807/1560-7917.ES.2021.26.24.2100509.\n\n\nLopez Bernal, Jamie, Nick Andrews, Charlotte Gower, et al. 2021. “Effectiveness of Covid-19 Vaccines Against the B.1.617.2 (Delta) Variant.” New England Journal of Medicine 385: 585–94. https://doi.org/10.1056/NEJMoa2108891.\n\n\nZachreson, Cameron, Freya M. Shearer, David J. Price, et al. 2022. “COVID-19 in Low-Tolerance Border Quarantine Systems: Impact of the Delta Variant of SARS-CoV-2.” Science Advances 8 (14): eabm3624. https://doi.org/10.1126/sciadv.abm3624."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I’m a student at Monash University specialising in Finance and Business Analytics.\nI’m interested in using data to understand real-world problems, identify meaningful patterns, and communicate insights that support better decision-making.\nThroughout my studies, I’ve developed experience working with R, Python, SQL, and data visualisation tools.\nThis website was created as part of ETC5523: Communicating with Data. It provides a space to explore data analysis, visualisation, and storytelling through blog posts."
+  },
+  {
+    "objectID": "about.html#hello-im-joshua",
+    "href": "about.html#hello-im-joshua",
+    "title": "About Me",
+    "section": "",
+    "text": "I’m a student at Monash University specialising in Finance and Business Analytics.\nI’m interested in using data to understand real-world problems, identify meaningful patterns, and communicate insights that support better decision-making.\nThroughout my studies, I’ve developed experience working with R, Python, SQL, and data visualisation tools.\nThis website was created as part of ETC5523: Communicating with Data. It provides a space to explore data analysis, visualisation, and storytelling through blog posts."
+  },
+  {
+    "objectID": "about.html#my-interests",
+    "href": "about.html#my-interests",
+    "title": "About Me",
+    "section": "My Interests",
+    "text": "My Interests\nSome of my main areas of interest include:\n\nData Analytics: Exploring datasets to identify trends and patterns.\nFinancial Analytics: Applying statistical techniques to financial and business problems.\nData Visualisation: Creating informative and engaging visualisations.\nProgramming: Developing my skills in R, Python, and SQL."
+  },
+  {
+    "objectID": "about.html#about-this-website",
+    "href": "about.html#about-this-website",
+    "title": "About Me",
+    "section": "About This Website",
+    "text": "About This Website\nThe purpose of this website is to communicate data-driven insights in a clear, accessible, and visually engaging way.\nThrough my blog posts, I aim to demonstrate how data can be used to answer interesting questions and communicate meaningful findings."
+  }
+]
