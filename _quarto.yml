@@ -1,17 +1,31 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "blog-template"
+  title: "Joshua Bannon's World of Data"
+  description: "Exploring data through visualisation, analysis and storytelling."
+
   navbar:
+    background: "#006DAE"
+    foreground: "#FFFFFF"
+    search: true
     right:
-      - about.qmd
+      - text: "Home"
+        href: index.qmd
+      - text: "Blog Posts"
+        href: blog.qmd
+      - text: "About"
+        href: about.qmd
       - icon: github
-        href: https://github.com/etc5523-2022
+        href: https://github.com/jban0020
+        aria-label: GitHub Profile
+
 format:
   html:
     theme: cosmo
     css: styles.css
-
-
-
+    toc: true
+    backgroundcolor: "#F6F6F6"
+    fontcolor: "#222222"
+    linkcolor: "#006DAE"

@@ -1,4 +1,398 @@
-/* css styles */
-.navbar-dark, .quarto-title-banner {
-  background-color: #006DAE;
+/* Colour palette */
+
+:root {
+  --monash-blue: #006DAE;
+  --dark-blue: #003B71;
+  --white: #FFFFFF;
+  --light-grey: #F6F6F6;
+  --border-grey: #E6E6E6;
+  --charcoal: #222222;
+  --dark-grey: #5A5A5A;
+}
+
+/* General appearance */
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--light-grey);
+  color: var(--charcoal);
+  line-height: 1.7;
+}
+
+main {
+  padding-top: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.1rem;
+}
+
+/* Navigation bar */
+
+.navbar,
+.navbar-dark {
+  background-color: var(--monash-blue) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: var(--white) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar .nav-link:hover,
+.navbar-brand:hover {
+  color: var(--white) !important;
+  text-decoration: underline;
+}
+
+/* Title banner */
+
+.quarto-title-banner {
+  background-color: var(--monash-blue) !important;
+  color: var(--white);
+}
+
+.quarto-title-banner h1,
+.quarto-title-banner .subtitle,
+.quarto-title-banner .description {
+  color: var(--white) !important;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--charcoal);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  border-bottom: 0.5rem solid transparent;
+  border-image: linear-gradient(
+  90deg,
+  var(--monash-blue),
+  var(--dark-blue)
+  ) 1;
+  padding-bottom: 0.4rem;
+  width: 100%;
+}
+
+h3 {
+  color: var(--monash-blue);
+}
+
+/* Links */
+
+main a {
+  color: var(--monash-blue);
+  text-decoration: none;
+}
+
+main a:hover {
+  color: var(--charcoal);
+  text-decoration: underline;
+}
+
+/* Homepage banner */
+
+.home-hero {
+  background: linear-gradient(135deg, var(--dark-blue), var(--monash-blue));
+  color: var(--white);
+  text-align: center;
+  padding: 5rem 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 10px;
+}
+
+.home-hero h1 {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.home-hero h3 {
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.home-hero p {
+  color: var(--white);
+  max-width: 750px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Homepage buttons */
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+.hero-buttons .btn {
+  margin: 0.4rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-buttons .btn-primary {
+  background-color: var(--white);
+  color: var(--dark-blue);
+  border: 2px solid var(--white);
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: var(--light-grey);
+  color: var(--dark-blue);
+}
+
+.hero-buttons .btn-outline-primary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.hero-buttons .btn-outline-primary:hover {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+/* Homepage content */
+
+.home-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.home-content h2 {
+  color: var(--dark-blue);
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Feature cards */
+
+.feature-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-grey);
+  border-radius: 8px;
+  padding: 1.75rem;
+  height: 100%;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card h3 {
+  color: var(--monash-blue);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: var(--charcoal);
+  margin-bottom: 0;
+}
+
+/* Blog listings */
+
+.quarto-post {
+  background-color: var(--white);
+  border: 1px solid var(--border-grey);
+  border-left: 4px solid var(--monash-blue);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.quarto-post:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.quarto-post .listing-title {
+  color: var(--charcoal);
+  font-weight: 650;
+}
+
+.quarto-post .listing-title:hover {
+  color: var(--monash-blue);
+}
+
+/* Grid blog cards */
+
+.quarto-grid-item {
+  background-color: var(--white);
+  border: 1px solid var(--border-grey);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.quarto-grid-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Categories */
+
+.quarto-category {
+  background-color: #E1E5F2 !important;
+  color: #022B3A !important;
+  border: 1px solid #BFDBF7 !important;
+  border-radius: 4px;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+.quarto-category a,
+.quarto-title .quarto-category {
+  color: #022B3A !important;
+}
+
+/* Blockquotes */
+
+blockquote {
+  background-color: var(--white);
+  border-left: 4px solid var(--monash-blue);
+  padding: 1rem 1.4rem;
+  border-radius: 4px;
+}
+
+/* Code blocks */
+
+pre {
+  background-color: var(--white);
+  border: 1px solid var(--border-grey);
+  border-radius: 6px;
+}
+
+/* Tables */
+
+thead {
+  background-color: var(--border-grey);
+}
+
+table {
+  border-color: var(--border-grey);
+}
+
+/* Sidebar */
+
+.sidebar-title {
+  color: var(--charcoal);
+  font-weight: 700;
+}
+
+.sidebar a {
+  color: var(--monash-blue);
+}
+
+/* About page */
+
+.quarto-about-jolla main.content {
+  text-align: left !important;
+}
+
+.quarto-about-jolla main.content h2,
+.quarto-about-jolla main.content h3,
+.quarto-about-jolla main.content p,
+.quarto-about-jolla main.content ul {
+  text-align: left !important;
+}
+
+/* Profile image */
+
+.quarto-about-jolla .about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.quarto-about-jolla .about-image img,
+.quarto-about-jolla img.about-image {
+  border-radius: 20px !important;
+}
+
+/* Footer */
+
+.nav-footer {
+  border-top: 1px solid var(--border-grey);
+  color: var(--dark-grey);
+}
+
+/* Mobile layout */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-hero {
+    padding: 3rem 1.25rem;
+  }
+
+  .home-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .home-content {
+    padding: 1rem;
+  }
+
+  .quarto-post {
+    padding: 1rem;
+  }
+}
+
+
+/* Blog page */
+
+.quarto-grid-item {
+  background-color: var(--white);
+  border: 1px solid var(--border-grey);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.quarto-grid-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.quarto-grid-item .listing-title {
+  color: var(--charcoal);
+  font-weight: 650;
+}
+
+.quarto-grid-item .listing-title:hover {
+  color: var(--monash-blue);
+}
+
+.quarto-grid-item .listing-description {
+  color: var(--dark-grey);
+}
+
+.quarto-grid-item .listing-categories {
+  margin-top: 1rem;
 }

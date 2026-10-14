@@ -1,13 +1,36 @@
 ---
-title: "About"
+title: "About Me"
 image: profile.jpg
 about:
   template: jolla
+  image-shape: rectangle
   links:
     - icon: github
-      text: Github
-      href: https://github.com/etc5523-2022
-
+      text: GitHub
+      href: https://github.com/jban0020
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+## Hello, I'm Joshua!
+
+I'm a student at Monash University specialising in Finance and Business Analytics.
+
+I'm interested in using data to understand real-world problems, identify meaningful patterns, and communicate insights that support better decision-making.
+
+Throughout my studies, I've developed experience working with R, Python, SQL, and data visualisation tools.
+
+This website was created as part of ETC5523: Communicating with Data. It provides a space to explore data analysis, visualisation, and storytelling through blog posts.
+
+## My Interests
+
+Some of my main areas of interest include:
+
+- **Data Analytics:** Exploring datasets to identify trends and patterns.
+- **Financial Analytics:** Applying statistical techniques to financial and business problems.
+- **Data Visualisation:** Creating informative and engaging visualisations.
+- **Programming:** Developing my skills in R, Python, and SQL.
+
+## About This Website
+
+The purpose of this website is to communicate data-driven insights in a clear, accessible, and visually engaging way.
+
+Through my blog posts, I aim to demonstrate how data can be used to answer interesting questions and communicate meaningful findings.

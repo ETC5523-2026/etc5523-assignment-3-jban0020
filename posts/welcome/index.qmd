@@ -1,12 +1,568 @@
 ---
-title: "Welcome To My Blog Template"
-author: "Emi Tanaka"
-date: "2022-07-18"
-categories: [news]
+title: "Could Vaccination Alone Keep COVID-19 Out?"
+subtitle: "What the Delta modelling revealed about quarantine and community protection"
+author: "Joshua Bannon"
+date: "2026-10-13"
+categories:
+  - Public Health
+  - COVID-19
+  - Data Analysis
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-This is the first post in a Quarto blog. Welcome!
+```{r}
+#| label: setup
+#| include: false
 
-![](thumbnail.jpg)
+library(ggplot2)
+library(dplyr)
+library(tibble)
+library(scales)
+library(gt)
 
+theme_set(theme_minimal(base_size = 13))
 
+monash_blue <- "#006DAE"
+navy <- "#022B3A"
+teal <- "#1F7A8C"
+light_blue <- "#BFDBF7"
+light_grey <- "#F1F7FC"
+```
+
+## 1. Problem Description
+
+### The challenge of reopening Australia's borders
+
+In 2021, Australia faced an important question: **could international travel safely resume if travellers and quarantine workers were vaccinated?**
+
+Border quarantine had helped Australia and New Zealand limit the spread of COVID-19. However, keeping international borders closed also meant separating families, disrupting travel and placing pressure on businesses.
+
+As vaccines became available, reopening seemed increasingly possible.
+
+Then came the Delta variant.
+
+Research showed that Delta spread more easily than earlier COVID-19 variants [@campbell2021]. Meanwhile, studies of vaccine effectiveness found that protection against Delta differed from protection against earlier variants [@lopezbernal2021].
+
+For governments considering reopening, this created two important questions:
+
+1. Could vaccination compensate for the additional quarantine risk created by a more transmissible variant?
+2. If an infection escaped quarantine, would vaccination prevent it from spreading through the community?
+
+Researchers investigated these questions using computer simulations of border quarantine and community transmission [@zachreson2022].
+
+Their findings revealed that **vaccinating people inside quarantine was only one part of protecting the wider community**.
+
+## 2. Analysis
+
+### How researchers investigated the problem
+
+Rather than relying on observed outbreaks alone, the researchers used computer models to explore what might happen under different conditions.
+
+The study by @zachreson2022 used available evidence on COVID-19 transmission, infection progression, testing and quarantine operations to develop its simulations.
+
+Its assumptions were informed by quarantine arrangements used in Australia and New Zealand, including testing and isolation procedures. Information about infection prevalence among international arrivals and previous quarantine breaches also helped establish the context and assess the models.
+
+The researchers then connected two models.
+
+The first was an **individual-based quarantine model**. It simulated travellers and workers moving through a quarantine facility, including opportunities for infection, testing, isolation and possible breaches.
+
+The simulated facility included up to 100 international travellers and 20 workers.
+
+The second was a **community transmission model**. It examined what could happen if an infectious person left quarantine and entered the wider population.
+
+The researchers varied three important factors:
+
+- **Virus transmissibility:** How easily the virus could spread between people.
+- **Vaccine efficacy against transmission:** How effectively vaccination could reduce infection and onward spread.
+- **Community vaccination coverage:** The proportion of people vaccinated outside quarantine.
+
+This allowed them to investigate both the risk of infections escaping quarantine and the risk of an outbreak after a breach.
+
+Importantly, the results are **estimates from hypothetical simulation scenarios**, not recorded outbreak counts. The figures below summarise findings from the published research rather than new simulations conducted for this blog.
+
+### Finding 1: More contagious variants require stronger protection
+
+The first question was whether vaccination could offset the increased quarantine risk associated with Delta.
+
+To investigate this, researchers compared different levels of vaccine efficacy and virus transmissibility.
+
+They began with a pre-Delta baseline scenario with no vaccination and a basic reproduction number of $R_0 = 3$.
+
+The basic reproduction number, or $R_0$, describes how many people one infected person would infect on average in a fully susceptible population.
+
+For example, an $R_0$ of 6 means an infected person could infect approximately six others under those conditions.
+
+The researchers then examined how effective vaccines would need to be to maintain the same level of quarantine breach risk as the original baseline.
+
+Their findings showed that higher transmissibility required stronger vaccine protection [@zachreson2022].
+
+```{r}
+#| label: fig-vaccine-efficacy
+#| fig-cap: "Approximate vaccine efficacy thresholds required to maintain the pre-Delta quarantine breach risk. Based on Figure 3 of Zachreson et al. (2022). Values indicate thresholds that must be exceeded."
+#| fig-width: 9
+#| fig-height: 4.8
+#| fig-align: center
+
+efficacy_data <- tibble(
+  scenario = c("R₀ = 6", "R₀ = 8"),
+  efficacy = c(60, 70)
+) |>
+  mutate(
+    scenario = factor(
+      scenario,
+      levels = c("R₀ = 8", "R₀ = 6")
+    )
+  )
+
+ggplot(
+  efficacy_data,
+  aes(x = efficacy, y = scenario)
+) +
+  geom_segment(
+    aes(
+      x = 0,
+      xend = efficacy,
+      yend = scenario
+    ),
+    linewidth = 3.5,
+    colour = light_blue,
+    lineend = "round"
+  ) +
+  geom_point(
+    size = 6,
+    colour = monash_blue
+  ) +
+  geom_text(
+    aes(label = paste0("Above ", efficacy, "%")),
+    nudge_x = 5,
+    hjust = 0,
+    size = 4.5,
+    fontface = "bold",
+    colour = navy
+  ) +
+  scale_x_continuous(
+    limits = c(0, 100),
+    breaks = seq(0, 100, 20),
+    labels = label_percent(scale = 1)
+  ) +
+  labs(
+    title = "More contagious variants need stronger protection",
+    subtitle = "Efficacy required to maintain the earlier quarantine breach risk",
+    x = "Vaccine efficacy against transmission",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(
+      face = "bold",
+      colour = navy,
+      size = 16
+    ),
+    plot.subtitle = element_text(
+      colour = teal,
+      size = 11
+    ),
+    axis.text = element_text(colour = navy),
+    axis.title.x = element_text(colour = navy),
+    plot.margin = margin(15, 20, 15, 15)
+  )
+```
+
+As shown in @fig-vaccine-efficacy, vaccine efficacy against transmission needed to exceed approximately **60%** when $R_0 = 6$ to maintain the pre-Delta quarantine breach risk.
+
+When transmissibility increased to $R_0 = 8$, the required efficacy increased to above **70%**.
+
+These values are approximate thresholds identified by the model, rather than measured effectiveness estimates for particular vaccines.
+
+The findings also depended on the quarantine conditions assumed by the researchers, including infection-control procedures and how travellers interacted with one another.
+
+The message is straightforward: **as a virus becomes more transmissible, stronger protection is required to maintain the same quarantine risk**.
+
+Vaccination could help compensate for Delta's increased transmissibility, but the amount of protection mattered.
+
+### Finding 2: Community vaccination matters too
+
+Preventing infections from escaping quarantine is important. But what happens if a breach still occurs?
+
+This was the second part of the researchers' investigation.
+
+The community transmission model examined how long it would take for there to be a 50% probability of at least one outbreak involving five or more cases.
+
+The researchers called this measure $t_{50}$.
+
+In simple terms, **a larger $t_{50}$ means that community outbreaks take longer to become likely under the modelled conditions**.
+
+The results showed that vaccinating travellers and quarantine workers alone was not enough to protect the broader population [@zachreson2022].
+
+When vaccine efficacy against transmission was below approximately 60%, even high community vaccination coverage provided comparatively limited additional protection against outbreaks.
+
+However, when efficacy reached 80% or higher, high vaccination coverage could substantially delay the point at which outbreaks became likely.
+
+The effects became particularly strong when community coverage exceeded approximately 80% under high-efficacy scenarios.
+
+This was an important distinction: protection inside quarantine could reduce the risk of an infection escaping, while vaccination across the community could limit transmission if a breach occurred.
+
+### Two layers of protection
+
+Figure @fig-protection-layers illustrates how the two parts of the model relate to different public-health strategies.
+
+```{r}
+#| label: fig-protection-layers
+#| fig-cap: "Two complementary layers of protection in the quarantine and community transmission framework. Conceptual illustration based on Zachreson et al. (2022); not a quantitative simulation result."
+#| fig-width: 9
+#| fig-height: 4.5
+#| fig-align: center
+
+protection_boxes <- tibble(
+  xmin = c(0.3, 3.85, 7.4),
+  xmax = c(2.9, 6.45, 10),
+  ymin = c(1.4, 1.4, 1.4),
+  ymax = c(3.2, 3.2, 3.2),
+  fill = c("Quarantine", "Breach", "Community")
+)
+
+ggplot() +
+  geom_rect(
+    data = protection_boxes,
+    aes(
+      xmin = xmin,
+      xmax = xmax,
+      ymin = ymin,
+      ymax = ymax,
+      fill = fill
+    ),
+    colour = NA
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Quarantine" = light_blue,
+      "Breach" = "#E1E5F2",
+      "Community" = light_blue
+    )
+  ) +
+  annotate(
+    "segment",
+    x = 3.05, xend = 3.7,
+    y = 2.3, yend = 2.3,
+    colour = navy,
+    linewidth = 1.1,
+    arrow = grid::arrow(
+      length = grid::unit(0.22, "cm")
+    )
+  ) +
+  annotate(
+    "segment",
+    x = 6.6, xend = 7.25,
+    y = 2.3, yend = 2.3,
+    colour = navy,
+    linewidth = 1.1,
+    arrow = grid::arrow(
+      length = grid::unit(0.22, "cm")
+    )
+  ) +
+  annotate(
+    "text",
+    x = 1.6, y = 2.75,
+    label = "QUARANTINE",
+    fontface = "bold",
+    size = 4.6,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 1.6, y = 2.25,
+    label = "Vaccination, testing",
+    size = 3.5,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 1.6, y = 1.9,
+    label = "and isolation",
+    size = 3.5,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 5.15, y = 2.75,
+    label = "POSSIBLE BREACH",
+    fontface = "bold",
+    size = 4.1,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 5.15, y = 2.2,
+    label = "An infectious person",
+    size = 3.5,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 5.15, y = 1.85,
+    label = "enters the community",
+    size = 3.5,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 8.7, y = 2.75,
+    label = "COMMUNITY",
+    fontface = "bold",
+    size = 4.6,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 8.7, y = 2.25,
+    label = "Population-wide",
+    size = 3.5,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 8.7, y = 1.9,
+    label = "vaccination",
+    size = 3.5,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 1.6, y = 0.75,
+    label = "LAYER 1",
+    fontface = "bold",
+    size = 4.2,
+    colour = monash_blue
+  ) +
+  annotate(
+    "text",
+    x = 1.6, y = 0.35,
+    label = "Reduce the risk of escape",
+    size = 3.5,
+    colour = navy
+  ) +
+  annotate(
+    "text",
+    x = 8.7, y = 0.75,
+    label = "LAYER 2",
+    fontface = "bold",
+    size = 4.2,
+    colour = monash_blue
+  ) +
+  annotate(
+    "text",
+    x = 8.7, y = 0.35,
+    label = "Limit spread after escape",
+    size = 3.5,
+    colour = navy
+  ) +
+  coord_cartesian(
+    xlim = c(0, 10.3),
+    ylim = c(0, 3.6),
+    expand = FALSE
+  ) +
+  labs(
+    title = "Protecting quarantine is only the first step",
+    subtitle = "Two layers of defence against community outbreaks"
+  ) +
+  theme_void(base_size = 13) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(
+      face = "bold",
+      colour = navy,
+      size = 16
+    ),
+    plot.subtitle = element_text(
+      colour = teal,
+      size = 11
+    ),
+    plot.margin = margin(15, 10, 15, 10)
+  )
+```
+
+The first layer reduces the likelihood of an infection escaping quarantine through vaccination, testing and isolation.
+
+The second provides protection if a breach occurs, with community vaccination helping to reduce transmission and delay outbreaks.
+
+This helps explain why the researchers concluded that vaccination within quarantine needed to be combined with broader population protection.
+
+### What did the different scenarios reveal?
+
+The study tested combinations of virus transmissibility, vaccine efficacy and community vaccination coverage.
+
+Table @tbl-vaccination summarises the main findings and what they mean for public-health decisions.
+
+```{r}
+#| label: tbl-vaccination
+#| tbl-cap: "Summary of the main vaccination findings and policy implications from Zachreson et al. (2022)."
+#| tbl-cap-location: bottom
+
+vaccination_summary <- tibble(
+  Scenario = c(
+    "Vaccination within quarantine",
+    "Efficacy below 60%",
+    "Efficacy of 80% or higher",
+    "High efficacy and coverage above ~80%"
+  ),
+  `Research finding` = c(
+    "Can reduce the likelihood of an infectious person leaving quarantine.",
+    "High community coverage provides relatively limited additional protection against outbreaks.",
+    "Increasing community coverage can substantially delay outbreaks.",
+    "Outbreak delays increase rapidly under the modelled conditions."
+  ),
+  `Policy implication` = c(
+    "Keep vaccination alongside testing and infection-control measures.",
+    "Do not rely on vaccination coverage alone to prevent transmission.",
+    "Consider vaccine efficacy and community coverage together.",
+    "Strong community protection can complement border quarantine."
+  )
+)
+
+vaccination_summary |>
+  gt() |>
+  tab_header(
+    title = md("**What the vaccination scenarios tell us**"),
+    subtitle = "Findings from Zachreson et al. (2022)"
+  ) |>
+  cols_label(
+    Scenario = "SCENARIO",
+    `Research finding` = "WHAT THE MODEL FOUND",
+    `Policy implication` = "WHY IT MATTERS"
+  ) |>
+  cols_width(
+    Scenario ~ pct(25),
+    `Research finding` ~ pct(38),
+    `Policy implication` ~ pct(37)
+  ) |>
+  tab_style(
+    style = list(
+      cell_fill(color = navy),
+      cell_text(
+        color = "#FFFFFF",
+        weight = "bold",
+        size = px(18)
+      )
+    ),
+    locations = cells_title(groups = "title")
+  ) |>
+  tab_style(
+    style = list(
+      cell_fill(color = navy),
+      cell_text(
+        color = light_blue,
+        size = px(12)
+      )
+    ),
+    locations = cells_title(groups = "subtitle")
+  ) |>
+  tab_style(
+    style = list(
+      cell_fill(color = "#E1E5F2"),
+      cell_text(
+        color = navy,
+        weight = "bold"
+      )
+    ),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style = cell_fill(color = light_grey),
+    locations = cells_body(
+      rows = c(2, 4)
+    )
+  ) |>
+  tab_style(
+    style = cell_text(
+      weight = "bold",
+      color = navy
+    ),
+    locations = cells_body(
+      columns = Scenario
+    )
+  ) |>
+  tab_options(
+    table.font.names = c(
+      "Helvetica Neue",
+      "Arial"
+    ),
+    table.font.size = px(13),
+    table.background.color = "#FFFFFF",
+    table.border.top.color = navy,
+    table.border.bottom.color = navy,
+    column_labels.border.bottom.color = light_blue,
+    data_row.padding = px(12),
+    heading.padding = px(16),
+    table.width = pct(100)
+  ) |>
+  tab_source_note(
+    source_note = md(
+      "*Source: Zachreson et al. (2022). Qualitative summary of published simulation results.*"
+    )
+  )
+```
+
+The table highlights an important finding: **high vaccination coverage was most protective when vaccines were also highly effective against transmission**.
+
+The researchers reported that increasing efficacy from 80% to 90% could produce particularly large improvements under some conditions.
+
+Their results also showed that the modelled time until an outbreak became likely could increase from approximately 15 days in the baseline scenario to the order of 1,000 days under strongly protective conditions [@zachreson2022].
+
+These figures describe different modelled scenarios, so the difference should not be interpreted as the effect of vaccination alone.
+
+The overall finding is that quarantine and community protection work together. One cannot reliably replace the other.
+
+### What does this mean for reopening borders?
+
+The research offers an important lesson for countries considering how to manage international arrivals during periods of low community transmission.
+
+Vaccinating travellers and quarantine workers can reduce the risk of an infectious person leaving quarantine. However, even a well-managed quarantine system cannot guarantee that every infection will be contained.
+
+The wider population therefore needs its own protection.
+
+The simulations suggest that reopening decisions should consider three factors together:
+
+1. **Variant transmissibility:** How easily the circulating variant spreads.
+2. **Vaccine efficacy:** How well available vaccines prevent infection and transmission.
+3. **Community vaccination coverage:** How widely that protection is distributed.
+
+For example, a more transmissible variant could increase quarantine risk even if vaccination requirements remained unchanged.
+
+Similarly, high community coverage might provide insufficient protection against transmission when vaccine efficacy is relatively low.
+
+These results support combining vaccination with testing, isolation and other infection-control measures rather than relying on a single intervention.
+
+The findings are also conditional on the researchers' assumptions about quarantine operations, disease progression and vaccine protection. Different settings could produce different outcomes.
+
+The practical message is that **safe reopening depends on protection both at the border and throughout the community**.
+
+## 3. Conclusion
+
+### Why vaccination was only part of the solution
+
+So, could vaccination alone keep COVID-19 out of Australia?
+
+**The modelling suggests that vaccination was important, but not enough on its own.**
+
+The study by @zachreson2022 found that vaccine efficacy against transmission needed to exceed approximately 60% when $R_0 = 6$, and 70% when $R_0 = 8$, to maintain the pre-Delta quarantine breach risk.
+
+However, reducing infections within quarantine was only part of the challenge. High community vaccination coverage was also important for delaying outbreaks after a breach, particularly when vaccines were highly effective against transmission.
+
+These findings need to be understood alongside research showing that Delta was more transmissible than earlier variants and that vaccine protection could differ across variants [@campbell2021; @lopezbernal2021].
+
+For policymakers, the lesson is not simply to vaccinate more people within quarantine. It is to consider how vaccination, community protection, testing and infection-control measures work together.
+
+Although the study focused on the Delta period, the broader message remains relevant:
+
+**Effective public-health strategies need multiple layers of protection and must adapt as the risks change.**
+
+## References
+
+::: {#refs}
+:::
