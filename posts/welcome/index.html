@@ -9,7 +9,7 @@
 <meta name="author" content="Joshua Bannon">
 <meta name="dcterms.date" content="2026-10-13">
 
-<title>Could Vaccination Alone Keep COVID-19 Out? – Joshua Bannon</title>
+<title>Could Vaccination Alone Keep COVID-19 Out? – Joshua Bannon’s World of Data</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -133,7 +133,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Joshua Bannon</span>
+    <span class="navbar-title">Joshua Bannon’s World of Data</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -171,7 +171,7 @@ window.Quarto = {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Could Vaccination Alone Keep COVID-19 Out?</h1>
-            <p class="subtitle lead">What the Delta modelling revealed</p>
+            <p class="subtitle lead">What the Delta modelling revealed about quarantine and community protection</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Public Health</div>
                 <div class="quarto-category">COVID-19</div>
@@ -218,7 +218,8 @@ window.Quarto = {
   <li><a href="#how-researchers-investigated-the-problem" id="toc-how-researchers-investigated-the-problem" class="nav-link" data-scroll-target="#how-researchers-investigated-the-problem">How researchers investigated the problem</a></li>
   <li><a href="#finding-1-more-contagious-variants-require-stronger-protection" id="toc-finding-1-more-contagious-variants-require-stronger-protection" class="nav-link" data-scroll-target="#finding-1-more-contagious-variants-require-stronger-protection">Finding 1: More contagious variants require stronger protection</a></li>
   <li><a href="#finding-2-community-vaccination-matters-too" id="toc-finding-2-community-vaccination-matters-too" class="nav-link" data-scroll-target="#finding-2-community-vaccination-matters-too">Finding 2: Community vaccination matters too</a></li>
-  <li><a href="#how-much-could-vaccination-delay-an-outbreak" id="toc-how-much-could-vaccination-delay-an-outbreak" class="nav-link" data-scroll-target="#how-much-could-vaccination-delay-an-outbreak">How much could vaccination delay an outbreak?</a></li>
+  <li><a href="#two-layers-of-protection" id="toc-two-layers-of-protection" class="nav-link" data-scroll-target="#two-layers-of-protection">Two layers of protection</a></li>
+  <li><a href="#what-did-the-different-scenarios-reveal" id="toc-what-did-the-different-scenarios-reveal" class="nav-link" data-scroll-target="#what-did-the-different-scenarios-reveal">What did the different scenarios reveal?</a></li>
   <li><a href="#what-does-this-mean-for-reopening-borders" id="toc-what-does-this-mean-for-reopening-borders" class="nav-link" data-scroll-target="#what-does-this-mean-for-reopening-borders">What does this mean for reopening borders?</a></li>
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">3. Conclusion</a>
@@ -241,44 +242,48 @@ window.Quarto = {
 <section id="the-challenge-of-reopening-australias-borders" class="level3">
 <h3 class="anchored" data-anchor-id="the-challenge-of-reopening-australias-borders">The challenge of reopening Australia’s borders</h3>
 <p>In 2021, Australia faced an important question: <strong>could international travel safely resume if travellers and quarantine workers were vaccinated?</strong></p>
-<p>Throughout the COVID-19 pandemic, border quarantine helped Australia and New Zealand keep infections from spreading into the community. However, strict border restrictions also separated families, disrupted international travel and placed pressure on industries such as tourism and education.</p>
-<p>As vaccination rates increased, reopening international borders became a more realistic possibility.</p>
+<p>Border quarantine had helped Australia and New Zealand limit the spread of COVID-19. However, keeping international borders closed also meant separating families, disrupting travel and placing pressure on businesses.</p>
+<p>As vaccines became available, reopening seemed increasingly possible.</p>
 <p>Then came the Delta variant.</p>
-<p>Research showed that Delta was considerably more transmissible than earlier COVID-19 variants, making it harder to prevent infections from spreading <span class="citation" data-cites="campbell2021">(<a href="#ref-campbell2021" role="doc-biblioref">Campbell et al. 2021</a>)</span>.</p>
-<p>At the same time, studies of vaccine effectiveness demonstrated that protection against Delta differed from protection against earlier variants <span class="citation" data-cites="lopezbernal2021">(<a href="#ref-lopezbernal2021" role="doc-biblioref">Lopez Bernal et al. 2021</a>)</span>.</p>
-<p>This created a difficult challenge for policymakers: how could countries reopen while keeping the risk of community outbreaks low?</p>
-<p>Two questions became particularly important:</p>
+<p>Research showed that Delta spread more easily than earlier COVID-19 variants <span class="citation" data-cites="campbell2021">(<a href="#ref-campbell2021" role="doc-biblioref">Campbell et al. 2021</a>)</span>. Meanwhile, studies of vaccine effectiveness found that protection against Delta differed from protection against earlier variants <span class="citation" data-cites="lopezbernal2021">(<a href="#ref-lopezbernal2021" role="doc-biblioref">Lopez Bernal et al. 2021</a>)</span>.</p>
+<p>For governments considering reopening, this created two important questions:</p>
 <ol type="1">
-<li>Could vaccination reduce the additional quarantine risk created by the Delta variant?</li>
-<li>Would vaccinating travellers and quarantine workers be enough to prevent community outbreaks?</li>
+<li>Could vaccination compensate for the additional quarantine risk created by a more transmissible variant?</li>
+<li>If an infection escaped quarantine, would vaccination prevent it from spreading through the community?</li>
 </ol>
-<p>Research by Zachreson et al. <span class="citation" data-cites="zachreson2022">(<a href="#ref-zachreson2022" role="doc-biblioref">Zachreson et al. 2022</a>)</span> investigated these questions through computer simulations of border quarantine and community transmission.</p>
+<p>Researchers investigated these questions using computer simulations of border quarantine and community transmission <span class="citation" data-cites="zachreson2022">(<a href="#ref-zachreson2022" role="doc-biblioref">Zachreson et al. 2022</a>)</span>.</p>
+<p>Their findings revealed that <strong>vaccinating people inside quarantine was only one part of protecting the wider community</strong>.</p>
 </section>
 </section>
 <section id="analysis" class="level2">
 <h2 class="anchored" data-anchor-id="analysis">2. Analysis</h2>
 <section id="how-researchers-investigated-the-problem" class="level3">
 <h3 class="anchored" data-anchor-id="how-researchers-investigated-the-problem">How researchers investigated the problem</h3>
-<p>Rather than waiting for outbreaks to occur, researchers used computer simulations to examine how COVID-19 might spread under different conditions.</p>
-<p>The study by <span class="citation" data-cites="zachreson2022">Zachreson et al. (<a href="#ref-zachreson2022" role="doc-biblioref">2022</a>)</span> used information from Australian and New Zealand international arrival data, Australian quarantine breach reports and public-health information to inform its modelling.</p>
-<p>The researchers developed two connected simulations.</p>
-<p>The first simulated infections within a quarantine facility containing up to 100 international travellers and 20 workers. It considered vaccination, testing, isolation and the possibility of infections escaping quarantine.</p>
-<p>The second examined what could happen after an infection entered the wider community.</p>
-<p>By combining these models, researchers investigated how three factors influenced COVID-19 risk:</p>
+<p>Rather than relying on observed outbreaks alone, the researchers used computer models to explore what might happen under different conditions.</p>
+<p>The study by <span class="citation" data-cites="zachreson2022">Zachreson et al. (<a href="#ref-zachreson2022" role="doc-biblioref">2022</a>)</span> used available evidence on COVID-19 transmission, infection progression, testing and quarantine operations to develop its simulations.</p>
+<p>Its assumptions were informed by quarantine arrangements used in Australia and New Zealand, including testing and isolation procedures. Information about infection prevalence among international arrivals and previous quarantine breaches also helped establish the context and assess the models.</p>
+<p>The researchers then connected two models.</p>
+<p>The first was an <strong>individual-based quarantine model</strong>. It simulated travellers and workers moving through a quarantine facility, including opportunities for infection, testing, isolation and possible breaches.</p>
+<p>The simulated facility included up to 100 international travellers and 20 workers.</p>
+<p>The second was a <strong>community transmission model</strong>. It examined what could happen if an infectious person left quarantine and entered the wider population.</p>
+<p>The researchers varied three important factors:</p>
 <ul>
-<li><strong>Virus transmissibility:</strong> How easily the virus spreads between people.</li>
-<li><strong>Vaccine efficacy:</strong> How effectively vaccination reduces infection and transmission.</li>
-<li><strong>Community vaccination coverage:</strong> The proportion of people vaccinated in the wider population.</li>
+<li><strong>Virus transmissibility:</strong> How easily the virus could spread between people.</li>
+<li><strong>Vaccine efficacy against transmission:</strong> How effectively vaccination could reduce infection and onward spread.</li>
+<li><strong>Community vaccination coverage:</strong> The proportion of people vaccinated outside quarantine.</li>
 </ul>
-<p>These were hypothetical scenarios generated by computer models, rather than records of actual outbreaks.</p>
+<p>This allowed them to investigate both the risk of infections escaping quarantine and the risk of an outbreak after a breach.</p>
+<p>Importantly, the results are <strong>estimates from hypothetical simulation scenarios</strong>, not recorded outbreak counts. The figures below summarise findings from the published research rather than new simulations conducted for this blog.</p>
 </section>
 <section id="finding-1-more-contagious-variants-require-stronger-protection" class="level3">
 <h3 class="anchored" data-anchor-id="finding-1-more-contagious-variants-require-stronger-protection">Finding 1: More contagious variants require stronger protection</h3>
-<p>One of the clearest findings was that vaccination became less able to offset quarantine risk as the virus became more transmissible.</p>
-<p>The researchers used a pre-Delta scenario with a basic reproduction number of <span class="math inline">\(R_0 = 3\)</span> and no vaccination as their baseline.</p>
-<p>The reproduction number, or <span class="math inline">\(R_0\)</span>, describes how many people one infected person would infect on average in a fully susceptible population.</p>
-<p>For example, an <span class="math inline">\(R_0\)</span> of 6 means that one infected person could infect approximately six other people under those conditions.</p>
-<p>The study found that higher vaccine efficacy against transmission was required to maintain the original quarantine breach risk as transmissibility increased <span class="citation" data-cites="zachreson2022">(<a href="#ref-zachreson2022" role="doc-biblioref">Zachreson et al. 2022</a>)</span>.</p>
+<p>The first question was whether vaccination could offset the increased quarantine risk associated with Delta.</p>
+<p>To investigate this, researchers compared different levels of vaccine efficacy and virus transmissibility.</p>
+<p>They began with a pre-Delta baseline scenario with no vaccination and a basic reproduction number of <span class="math inline">\(R_0 = 3\)</span>.</p>
+<p>The basic reproduction number, or <span class="math inline">\(R_0\)</span>, describes how many people one infected person would infect on average in a fully susceptible population.</p>
+<p>For example, an <span class="math inline">\(R_0\)</span> of 6 means an infected person could infect approximately six others under those conditions.</p>
+<p>The researchers then examined how effective vaccines would need to be to maintain the same level of quarantine breach risk as the original baseline.</p>
+<p>Their findings showed that higher transmissibility required stronger vaccine protection <span class="citation" data-cites="zachreson2022">(<a href="#ref-zachreson2022" role="doc-biblioref">Zachreson et al. 2022</a>)</span>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-vaccine-efficacy" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -287,58 +292,86 @@ window.Quarto = {
 <img src="index_files/figure-html/fig-vaccine-efficacy-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="864">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vaccine-efficacy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the pre-Delta quarantine breach risk. Based on Zachreson et al.&nbsp;(2022).
+Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the pre-Delta quarantine breach risk. Based on Figure 3 of Zachreson et al.&nbsp;(2022). Values indicate thresholds that must be exceeded.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>As shown in <a href="#fig-vaccine-efficacy" class="quarto-xref">Figure&nbsp;1</a>, vaccine efficacy against transmission needed to exceed approximately <strong>60%</strong> when <span class="math inline">\(R_0 = 6\)</span> to maintain the pre-Delta quarantine breach risk.</p>
-<p>When transmissibility increased to <span class="math inline">\(R_0 = 8\)</span>, this threshold rose to above <strong>70%</strong>.</p>
-<p>These values represent approximate thresholds from the model. They are not estimates of the effectiveness of any particular vaccine.</p>
-<p>The important message is that the effectiveness of a quarantine strategy depends on how transmissible the circulating variant is.</p>
-<p><strong>As the virus becomes more contagious, stronger protection is required to maintain the same level of safety.</strong></p>
+<p>When transmissibility increased to <span class="math inline">\(R_0 = 8\)</span>, the required efficacy increased to above <strong>70%</strong>.</p>
+<p>These values are approximate thresholds identified by the model, rather than measured effectiveness estimates for particular vaccines.</p>
+<p>The findings also depended on the quarantine conditions assumed by the researchers, including infection-control procedures and how travellers interacted with one another.</p>
+<p>The message is straightforward: <strong>as a virus becomes more transmissible, stronger protection is required to maintain the same quarantine risk</strong>.</p>
+<p>Vaccination could help compensate for Delta’s increased transmissibility, but the amount of protection mattered.</p>
 </section>
 <section id="finding-2-community-vaccination-matters-too" class="level3">
 <h3 class="anchored" data-anchor-id="finding-2-community-vaccination-matters-too">Finding 2: Community vaccination matters too</h3>
-<p>Reducing the chance of an infection escaping quarantine is important. However, what happens if an infected person still enters the community?</p>
-<p>The researchers investigated this by modelling the spread of infections after a quarantine breach.</p>
-<p>Their analysis considered how long it would take for the probability of an outbreak involving at least five cases to reach 50%.</p>
-<p>The results showed that protecting the quarantine facility and protecting the wider community are two different challenges.</p>
-<p>Vaccinating travellers and quarantine workers reduces the risk of infections escaping quarantine.</p>
-<p>However, community vaccination becomes particularly important if a breach occurs.</p>
-<p>When vaccine efficacy against transmission was below approximately 60%, increasing community vaccination coverage provided comparatively limited additional protection against outbreaks.</p>
-<p>When efficacy reached 80% or higher, high vaccination coverage substantially delayed the point at which community outbreaks became likely <span class="citation" data-cites="zachreson2022">(<a href="#ref-zachreson2022" role="doc-biblioref">Zachreson et al. 2022</a>)</span>.</p>
-<p><a href="#tbl-vaccination" class="quarto-xref">Table&nbsp;1</a> summarises the main findings.</p>
+<p>Preventing infections from escaping quarantine is important. But what happens if a breach still occurs?</p>
+<p>This was the second part of the researchers’ investigation.</p>
+<p>The community transmission model examined how long it would take for there to be a 50% probability of at least one outbreak involving five or more cases.</p>
+<p>The researchers called this measure <span class="math inline">\(t_{50}\)</span>.</p>
+<p>In simple terms, <strong>a larger <span class="math inline">\(t_{50}\)</span> means that community outbreaks take longer to become likely under the modelled conditions</strong>.</p>
+<p>The results showed that vaccinating travellers and quarantine workers alone was not enough to protect the broader population <span class="citation" data-cites="zachreson2022">(<a href="#ref-zachreson2022" role="doc-biblioref">Zachreson et al. 2022</a>)</span>.</p>
+<p>When vaccine efficacy against transmission was below approximately 60%, even high community vaccination coverage provided comparatively limited additional protection against outbreaks.</p>
+<p>However, when efficacy reached 80% or higher, high vaccination coverage could substantially delay the point at which outbreaks became likely.</p>
+<p>The effects became particularly strong when community coverage exceeded approximately 80% under high-efficacy scenarios.</p>
+<p>This was an important distinction: protection inside quarantine could reduce the risk of an infection escaping, while vaccination across the community could limit transmission if a breach occurred.</p>
+</section>
+<section id="two-layers-of-protection" class="level3">
+<h3 class="anchored" data-anchor-id="two-layers-of-protection">Two layers of protection</h3>
+<p>Figure <a href="#fig-protection-layers" class="quarto-xref">Figure&nbsp;2</a> illustrates how the two parts of the model relate to different public-health strategies.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-protection-layers" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-protection-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-protection-layers-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="864">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-protection-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Two complementary layers of protection in the quarantine and community transmission framework. Conceptual illustration based on Zachreson et al.&nbsp;(2022); not a quantitative simulation result.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The first layer reduces the likelihood of an infection escaping quarantine through vaccination, testing and isolation.</p>
+<p>The second provides protection if a breach occurs, with community vaccination helping to reduce transmission and delay outbreaks.</p>
+<p>This helps explain why the researchers concluded that vaccination within quarantine needed to be combined with broader population protection.</p>
+</section>
+<section id="what-did-the-different-scenarios-reveal" class="level3">
+<h3 class="anchored" data-anchor-id="what-did-the-different-scenarios-reveal">What did the different scenarios reveal?</h3>
+<p>The study tested combinations of virus transmissibility, vaccine efficacy and community vaccination coverage.</p>
+<p>Table <a href="#tbl-vaccination" class="quarto-xref">Table&nbsp;1</a> summarises the main findings and what they mean for public-health decisions.</p>
 <div class="cell" data-tbl-cap-location="bottom">
 <div id="tbl-vaccination" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="bottom">
 <figure class="quarto-float quarto-float-tbl figure">
 <div aria-describedby="tbl-vaccination-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="mzfobclnwz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mzfobclnwz table {
+<div id="pnojcdjgcy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pnojcdjgcy table {
   font-family: 'Helvetica Neue', Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mzfobclnwz thead, #mzfobclnwz tbody, #mzfobclnwz tfoot, #mzfobclnwz tr, #mzfobclnwz td, #mzfobclnwz th {
+#pnojcdjgcy thead, #pnojcdjgcy tbody, #pnojcdjgcy tfoot, #pnojcdjgcy tr, #pnojcdjgcy td, #pnojcdjgcy th {
   border-style: none;
 }
 
-#mzfobclnwz p {
+#pnojcdjgcy p {
   margin: 0;
   padding: 0;
 }
 
-#mzfobclnwz .gt_table {
+#pnojcdjgcy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -357,36 +390,36 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   border-left-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_caption {
+#pnojcdjgcy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mzfobclnwz .gt_title {
+#pnojcdjgcy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   padding-left: 5px;
   padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
 
-#mzfobclnwz .gt_subtitle {
+#pnojcdjgcy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
-  padding-top: 14px;
-  padding-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 17px;
   padding-left: 5px;
   padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#mzfobclnwz .gt_heading {
+#pnojcdjgcy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -398,13 +431,13 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   border-right-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_bottom_border {
+#pnojcdjgcy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_col_headings {
+#pnojcdjgcy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -419,7 +452,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   border-right-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_col_heading {
+#pnojcdjgcy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -439,7 +472,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   overflow-x: hidden;
 }
 
-#mzfobclnwz .gt_column_spanner_outer {
+#pnojcdjgcy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -451,15 +484,15 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   padding-right: 4px;
 }
 
-#mzfobclnwz .gt_column_spanner_outer:first-child {
+#pnojcdjgcy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mzfobclnwz .gt_column_spanner_outer:last-child {
+#pnojcdjgcy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mzfobclnwz .gt_column_spanner {
+#pnojcdjgcy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #BFDBF7;
@@ -471,11 +504,11 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   width: 100%;
 }
 
-#mzfobclnwz .gt_spanner_row {
+#pnojcdjgcy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mzfobclnwz .gt_group_heading {
+#pnojcdjgcy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -501,7 +534,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   text-align: left;
 }
 
-#mzfobclnwz .gt_empty_group_heading {
+#pnojcdjgcy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -516,17 +549,17 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   vertical-align: middle;
 }
 
-#mzfobclnwz .gt_from_md > :first-child {
+#pnojcdjgcy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mzfobclnwz .gt_from_md > :last-child {
+#pnojcdjgcy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mzfobclnwz .gt_row {
-  padding-top: 15px;
-  padding-bottom: 15px;
+#pnojcdjgcy .gt_row {
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
@@ -543,7 +576,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   overflow-x: hidden;
 }
 
-#mzfobclnwz .gt_stub {
+#pnojcdjgcy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -556,7 +589,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   padding-right: 5px;
 }
 
-#mzfobclnwz .gt_stub_row_group {
+#pnojcdjgcy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -570,15 +603,15 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   vertical-align: top;
 }
 
-#mzfobclnwz .gt_row_group_first td {
+#pnojcdjgcy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mzfobclnwz .gt_row_group_first th {
+#pnojcdjgcy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mzfobclnwz .gt_summary_row {
+#pnojcdjgcy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -588,16 +621,16 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   padding-right: 5px;
 }
 
-#mzfobclnwz .gt_first_summary_row {
+#pnojcdjgcy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_first_summary_row.thick {
+#pnojcdjgcy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mzfobclnwz .gt_last_summary_row {
+#pnojcdjgcy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -607,7 +640,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   border-bottom-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_grand_summary_row {
+#pnojcdjgcy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -617,7 +650,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   padding-right: 5px;
 }
 
-#mzfobclnwz .gt_first_grand_summary_row {
+#pnojcdjgcy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -627,7 +660,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   border-top-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_last_grand_summary_row_top {
+#pnojcdjgcy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -637,11 +670,11 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   border-bottom-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_striped {
+#pnojcdjgcy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mzfobclnwz .gt_table_body {
+#pnojcdjgcy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -650,7 +683,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   border-bottom-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_footnotes {
+#pnojcdjgcy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -664,7 +697,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   border-right-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_footnote {
+#pnojcdjgcy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -673,7 +706,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   padding-right: 5px;
 }
 
-#mzfobclnwz .gt_sourcenotes {
+#pnojcdjgcy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -687,7 +720,7 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   border-right-color: #D3D3D3;
 }
 
-#mzfobclnwz .gt_sourcenote {
+#pnojcdjgcy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -695,165 +728,155 @@ Figure&nbsp;1: Approximate vaccine efficacy thresholds required to maintain the 
   padding-right: 5px;
 }
 
-#mzfobclnwz .gt_left {
+#pnojcdjgcy .gt_left {
   text-align: left;
 }
 
-#mzfobclnwz .gt_center {
+#pnojcdjgcy .gt_center {
   text-align: center;
 }
 
-#mzfobclnwz .gt_right {
+#pnojcdjgcy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mzfobclnwz .gt_font_normal {
+#pnojcdjgcy .gt_font_normal {
   font-weight: normal;
 }
 
-#mzfobclnwz .gt_font_bold {
+#pnojcdjgcy .gt_font_bold {
   font-weight: bold;
 }
 
-#mzfobclnwz .gt_font_italic {
+#pnojcdjgcy .gt_font_italic {
   font-style: italic;
 }
 
-#mzfobclnwz .gt_super {
+#pnojcdjgcy .gt_super {
   font-size: 65%;
 }
 
-#mzfobclnwz .gt_footnote_marks {
+#pnojcdjgcy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mzfobclnwz .gt_asterisk {
+#pnojcdjgcy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mzfobclnwz .gt_indent_1 {
+#pnojcdjgcy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mzfobclnwz .gt_indent_2 {
+#pnojcdjgcy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mzfobclnwz .gt_indent_3 {
+#pnojcdjgcy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mzfobclnwz .gt_indent_4 {
+#pnojcdjgcy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mzfobclnwz .gt_indent_5 {
+#pnojcdjgcy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mzfobclnwz .katex-display {
+#pnojcdjgcy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mzfobclnwz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pnojcdjgcy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
 <table class="gt_table cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 38%">
+<col style="width: 37%">
+</colgroup>
 <thead>
 <tr class="gt_heading header">
-<td colspan="2" class="gt_heading gt_title gt_font_normal" style="background-color: #022B3A; color: #FFFFFF; font-size: 18px; font-weight: bold"><strong>How vaccination affects COVID-19 outbreak risk</strong></td>
+<td colspan="3" class="gt_heading gt_title gt_font_normal" style="background-color: #022B3A; color: #FFFFFF; font-size: 18px; font-weight: bold"><strong>What the vaccination scenarios tell us</strong></td>
 </tr>
 <tr class="gt_heading even">
-<td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="background-color: #022B3A; color: #BFDBF7; font-size: 12px">Evidence from Zachreson et al. (2022)</td>
+<td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="background-color: #022B3A; color: #BFDBF7; font-size: 12px">Findings from Zachreson et al. (2022)</td>
 </tr>
 <tr class="gt_col_headings header">
-<th id="Scenario" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="background-color: #E1E5F2; color: #022B3A; font-weight: bold" scope="col">VACCINATION SCENARIO</th>
-<th id="Key-finding" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="background-color: #E1E5F2; color: #022B3A; font-weight: bold" scope="col">KEY FINDING</th>
+<th id="Scenario" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="background-color: #E1E5F2; color: #022B3A; font-weight: bold" scope="col">SCENARIO</th>
+<th id="Research-finding" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="background-color: #E1E5F2; color: #022B3A; font-weight: bold" scope="col">WHAT THE MODEL FOUND</th>
+<th id="Policy-implication" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="background-color: #E1E5F2; color: #022B3A; font-weight: bold" scope="col">WHY IT MATTERS</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="Scenario" style="font-weight: bold">Vaccination within quarantine</td>
-<td class="gt_row gt_left" headers="Key finding">Reduces the risk of infections escaping quarantine.</td>
+<td class="gt_row gt_left" headers="Scenario" style="color: #022B3A; font-weight: bold">Vaccination within quarantine</td>
+<td class="gt_row gt_left" headers="Research finding">Can reduce the likelihood of an infectious person leaving quarantine.</td>
+<td class="gt_row gt_left" headers="Policy implication">Keep vaccination alongside testing and infection-control measures.</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Scenario" style="background-color: #F1F7FC; font-weight: bold">Vaccine efficacy below 60%</td>
-<td class="gt_row gt_left" headers="Key finding" style="background-color: #F1F7FC">Limited protection against community outbreaks, even with high coverage.</td>
+<td class="gt_row gt_left" headers="Scenario" style="background-color: #F1F7FC; color: #022B3A; font-weight: bold">Efficacy below 60%</td>
+<td class="gt_row gt_left" headers="Research finding" style="background-color: #F1F7FC">High community coverage provides relatively limited additional protection against outbreaks.</td>
+<td class="gt_row gt_left" headers="Policy implication" style="background-color: #F1F7FC">Do not rely on vaccination coverage alone to prevent transmission.</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Scenario" style="font-weight: bold">Vaccine efficacy of 80% or higher</td>
-<td class="gt_row gt_left" headers="Key finding">Greater protection against community transmission as coverage increases.</td>
+<td class="gt_row gt_left" headers="Scenario" style="color: #022B3A; font-weight: bold">Efficacy of 80% or higher</td>
+<td class="gt_row gt_left" headers="Research finding">Increasing community coverage can substantially delay outbreaks.</td>
+<td class="gt_row gt_left" headers="Policy implication">Consider vaccine efficacy and community coverage together.</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Scenario" style="background-color: #F1F7FC; font-weight: bold">High efficacy + high community coverage</td>
-<td class="gt_row gt_left" headers="Key finding" style="background-color: #F1F7FC">Substantially delays the likelihood of a community outbreak.</td>
+<td class="gt_row gt_left" headers="Scenario" style="background-color: #F1F7FC; color: #022B3A; font-weight: bold">High efficacy and coverage above ~80%</td>
+<td class="gt_row gt_left" headers="Research finding" style="background-color: #F1F7FC">Outbreak delays increase rapidly under the modelled conditions.</td>
+<td class="gt_row gt_left" headers="Policy implication" style="background-color: #F1F7FC">Strong community protection can complement border quarantine.</td>
 </tr>
-</tbody>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="3" class="gt_sourcenote"><em>Source: Zachreson et al.&nbsp;(2022). Qualitative summary of published simulation results.</em></td>
+</tr>
+</tfoot>
+
 </table>
 
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-vaccination-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: How vaccine efficacy and vaccination coverage influence quarantine and community outbreak risk.
+Table&nbsp;1: Summary of the main vaccination findings and policy implications from Zachreson et al.&nbsp;(2022).
 </figcaption>
 </figure>
 </div>
 </div>
-<p>The results highlight why vaccination coverage matters beyond the quarantine facility.</p>
-<p>A highly effective vaccine may reduce transmission, but its population-level benefit also depends on how many people are vaccinated.</p>
-<p>Similarly, even high vaccination coverage cannot fully compensate for a vaccine that provides relatively limited protection against transmission.</p>
-<p><strong>Protecting the wider community requires both effective vaccines and widespread vaccination.</strong></p>
-<p>These findings relate to protection against transmission, rather than the separate question of how well vaccines prevent severe illness.</p>
-</section>
-<section id="how-much-could-vaccination-delay-an-outbreak" class="level3">
-<h3 class="anchored" data-anchor-id="how-much-could-vaccination-delay-an-outbreak">How much could vaccination delay an outbreak?</h3>
-<p>The simulations also showed just how strongly effective vaccination could influence the time until a community outbreak became likely.</p>
-<p>Researchers measured the time until there was a 50% probability of at least one outbreak involving five or more cases.</p>
-<p>Under the pre-Delta baseline scenario, this occurred after approximately <strong>15 days</strong>.</p>
-<p>However, in scenarios combining high vaccine efficacy with high community vaccination coverage, the modelled time could increase to the order of <strong>1,000 days</strong>, although the results depended on virus transmissibility and the specific vaccination scenario <span class="citation" data-cites="zachreson2022">(<a href="#ref-zachreson2022" role="doc-biblioref">Zachreson et al. 2022</a>)</span>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-outbreak-delay" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-outbreak-delay-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-outbreak-delay-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="864">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-outbreak-delay-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Approximate modelled time until a 50% probability of a community outbreak involving at least five cases. Based on Zachreson et al.&nbsp;(2022).
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>As shown in <a href="#fig-outbreak-delay" class="quarto-xref">Figure&nbsp;2</a>, the modelled time until a community outbreak became likely differed substantially between the scenarios.</p>
-<p>Under the pre-Delta baseline, the model estimated approximately <strong>15 days</strong> until there was a 50% probability of an outbreak involving at least five cases.</p>
-<p>Under scenarios combining high vaccine efficacy with high community vaccination coverage, this increased to the order of <strong>1,000 days</strong> <span class="citation" data-cites="zachreson2022">(<a href="#ref-zachreson2022" role="doc-biblioref">Zachreson et al. 2022</a>)</span>.</p>
-<p>The figure uses a logarithmic scale to display both scenarios clearly. These results do not mean vaccination guarantees 1,000 outbreak-free days, and the difference cannot be attributed to vaccination alone because the modelled conditions differ.</p>
-<p>Instead, the findings illustrate how effective vaccination and high community coverage can substantially reduce outbreak risk.</p>
+<p>The table highlights an important finding: <strong>high vaccination coverage was most protective when vaccines were also highly effective against transmission</strong>.</p>
+<p>The researchers reported that increasing efficacy from 80% to 90% could produce particularly large improvements under some conditions.</p>
+<p>Their results also showed that the modelled time until an outbreak became likely could increase from approximately 15 days in the baseline scenario to the order of 1,000 days under strongly protective conditions <span class="citation" data-cites="zachreson2022">(<a href="#ref-zachreson2022" role="doc-biblioref">Zachreson et al. 2022</a>)</span>.</p>
+<p>These figures describe different modelled scenarios, so the difference should not be interpreted as the effect of vaccination alone.</p>
+<p>The overall finding is that quarantine and community protection work together. One cannot reliably replace the other.</p>
 </section>
 <section id="what-does-this-mean-for-reopening-borders" class="level3">
 <h3 class="anchored" data-anchor-id="what-does-this-mean-for-reopening-borders">What does this mean for reopening borders?</h3>
-<p>The research demonstrates why vaccination within quarantine was not enough to guarantee safe reopening during the Delta period.</p>
-<p>While vaccinating travellers and quarantine workers could reduce the likelihood of a breach, an infection that entered the community could still develop into an outbreak.</p>
-<p>The findings suggest that decisions about border restrictions needed to consider three factors together:</p>
+<p>The research offers an important lesson for countries considering how to manage international arrivals during periods of low community transmission.</p>
+<p>Vaccinating travellers and quarantine workers can reduce the risk of an infectious person leaving quarantine. However, even a well-managed quarantine system cannot guarantee that every infection will be contained.</p>
+<p>The wider population therefore needs its own protection.</p>
+<p>The simulations suggest that reopening decisions should consider three factors together:</p>
 <ol type="1">
-<li>How transmissible the circulating variant was.</li>
-<li>How effectively available vaccines reduced transmission.</li>
-<li>How much of the wider community was vaccinated.</li>
+<li><strong>Variant transmissibility:</strong> How easily the circulating variant spreads.</li>
+<li><strong>Vaccine efficacy:</strong> How well available vaccines prevent infection and transmission.</li>
+<li><strong>Community vaccination coverage:</strong> How widely that protection is distributed.</li>
 </ol>
-<p>These factors could change over time.</p>
-<p>For example, a more transmissible variant could increase the chance of infections escaping quarantine, even when vaccination requirements remained unchanged.</p>
-<p>Likewise, limited community protection could increase the risk that an escaped infection developed into an outbreak.</p>
-<p>This is why the researchers’ findings support combining vaccination with effective testing, isolation and infection-control measures.</p>
-<p>The broader lesson is that <strong>border reopening decisions should respond to changing evidence rather than rely on vaccination status alone</strong>.</p>
+<p>For example, a more transmissible variant could increase quarantine risk even if vaccination requirements remained unchanged.</p>
+<p>Similarly, high community coverage might provide insufficient protection against transmission when vaccine efficacy is relatively low.</p>
+<p>These results support combining vaccination with testing, isolation and other infection-control measures rather than relying on a single intervention.</p>
+<p>The findings are also conditional on the researchers’ assumptions about quarantine operations, disease progression and vaccine protection. Different settings could produce different outcomes.</p>
+<p>The practical message is that <strong>safe reopening depends on protection both at the border and throughout the community</strong>.</p>
 </section>
 </section>
 <section id="conclusion" class="level2">
@@ -861,15 +884,13 @@ Figure&nbsp;2: Approximate modelled time until a 50% probability of a community 
 <section id="why-vaccination-was-only-part-of-the-solution" class="level3">
 <h3 class="anchored" data-anchor-id="why-vaccination-was-only-part-of-the-solution">Why vaccination was only part of the solution</h3>
 <p>So, could vaccination alone keep COVID-19 out of Australia?</p>
-<p><strong>The modelling suggests that vaccination was an important defence, but not a complete solution.</strong></p>
-<p>Research by <span class="citation" data-cites="zachreson2022">Zachreson et al. (<a href="#ref-zachreson2022" role="doc-biblioref">2022</a>)</span> found that vaccination could help offset the greater quarantine risk associated with more transmissible variants, but only when vaccine efficacy against transmission was sufficiently high.</p>
-<p>For a virus with an <span class="math inline">\(R_0\)</span> of 6, efficacy needed to exceed approximately 60% to maintain the earlier quarantine breach risk. When <span class="math inline">\(R_0\)</span> increased to 8, the required efficacy rose above 70%.</p>
-<p>The study also showed that vaccinating travellers and quarantine workers was not sufficient by itself to protect the wider community.</p>
-<p>High community vaccination coverage, particularly when vaccines were highly effective against transmission, provided additional protection against outbreaks.</p>
-<p>These findings are consistent with the broader evidence showing that the Delta variant increased transmission challenges and that vaccine protection varied across variants <span class="citation" data-cites="campbell2021 lopezbernal2021">(<a href="#ref-campbell2021" role="doc-biblioref">Campbell et al. 2021</a>; <a href="#ref-lopezbernal2021" role="doc-biblioref">Lopez Bernal et al. 2021</a>)</span>.</p>
-<p>The central lesson is that no single measure can eliminate the risk of an outbreak.</p>
-<p>For policymakers, effective border management requires considering vaccination, community protection, variant transmissibility and infection-control measures together.</p>
-<p>Although this research focused on the Delta period, its broader message remains relevant: <strong>public-health strategies need to adapt when the risks they are designed to manage change.</strong></p>
+<p><strong>The modelling suggests that vaccination was important, but not enough on its own.</strong></p>
+<p>The study by <span class="citation" data-cites="zachreson2022">Zachreson et al. (<a href="#ref-zachreson2022" role="doc-biblioref">2022</a>)</span> found that vaccine efficacy against transmission needed to exceed approximately 60% when <span class="math inline">\(R_0 = 6\)</span>, and 70% when <span class="math inline">\(R_0 = 8\)</span>, to maintain the pre-Delta quarantine breach risk.</p>
+<p>However, reducing infections within quarantine was only part of the challenge. High community vaccination coverage was also important for delaying outbreaks after a breach, particularly when vaccines were highly effective against transmission.</p>
+<p>These findings need to be understood alongside research showing that Delta was more transmissible than earlier variants and that vaccine protection could differ across variants <span class="citation" data-cites="campbell2021 lopezbernal2021">(<a href="#ref-campbell2021" role="doc-biblioref">Campbell et al. 2021</a>; <a href="#ref-lopezbernal2021" role="doc-biblioref">Lopez Bernal et al. 2021</a>)</span>.</p>
+<p>For policymakers, the lesson is not simply to vaccinate more people within quarantine. It is to consider how vaccination, community protection, testing and infection-control measures work together.</p>
+<p>Although the study focused on the Delta period, the broader message remains relevant:</p>
+<p><strong>Effective public-health strategies need multiple layers of protection and must adapt as the risks change.</strong></p>
 </section>
 </section>
 <section id="references" class="level2">
