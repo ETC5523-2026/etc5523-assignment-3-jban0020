@@ -76,8 +76,14 @@ h1 {
 }
 
 h2 {
-  border-bottom: 2px solid var(--monash-blue);
+  border-bottom: 0.5rem solid transparent;
+  border-image: linear-gradient(
+  90deg,
+  var(--monash-blue),
+  var(--dark-blue)
+  ) 1;
   padding-bottom: 0.4rem;
+  width: 100%;
 }
 
 h3 {
@@ -309,6 +315,18 @@ table {
 .quarto-about-jolla main.content p,
 .quarto-about-jolla main.content ul {
   text-align: left !important;
+}
+
+/* Profile image */
+
+.quarto-about-jolla .about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.quarto-about-jolla .about-image img,
+.quarto-about-jolla img.about-image {
+  border-radius: 20px !important;
 }
 
 /* Footer */

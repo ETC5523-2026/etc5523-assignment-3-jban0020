@@ -4,13 +4,14 @@ listing:
   contents: posts
   sort: "date desc"
   type: grid
-  categories: true
+  categories: false
   sort-ui: false
   filter-ui: false
   image-height: 180px
   grid-columns: 2
 page-layout: full
 title-block-banner: false
+toc: false
 ---
 
 ::: {.home-hero}

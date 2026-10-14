@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Joshua Bannon"
+  title: "Joshua Bannon's World of Data"
   description: "Exploring data through visualisation, analysis and storytelling."
 
   navbar:
